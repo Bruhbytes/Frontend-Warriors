@@ -11,3 +11,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.container
+{
+  display: flex;
+
+}
+.inner1
+{ 
+  left: 0%;
+background-color: aqua;
+width: 50vw;
+height: 100vh;
+}
+.inner2_2
+{
+  position: relative;
+  top: 250px;
+  height: 300px;
+  width: 20vw;
+  background-color: blueviolet;
+  
+}
+div
+{
+  color: rgb(112, 187, 100);
+}
+
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: rgb(22, 176, 218);
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  /* background-color: red; */
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered  {
+  height: 300px;
+  width: 250px;
+  /* border-radius: 50%; */
+  background-color: aqua;
+}
