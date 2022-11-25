@@ -13,8 +13,7 @@ function App() {
         <p>hellooo</p><div></div>
        <Home/>
        </div>
-       <p>app components</p>
-        
+       
       </div>
    
   </>

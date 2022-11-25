@@ -57,12 +57,28 @@
 #pulsefit{
   position: absolute;
   z-index: 10;
-  left: 50%;
+  margin: auto;
+  left:25%;
+  top:35%;
+  
+  font-size: 45px;
   color:  rgb(249, 249, 250) ;
 }
-#logoimg{
-  height: 200px;
-  width: 200px;
+#logoImg{
+  height: 100px;
+  width: 100px;
   position: absolute;
-  z-index:10;
+  z-index:50;
+  top: 50%;
+  left:50%;
+}
+#logoImg-n{
+  height: 50px;
+  width: 50px;
+  z-index:50;
+}
+#aboutus{
+  
+  z-index: 50;
+  position: absolute ;
 }
