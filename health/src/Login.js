@@ -29,50 +29,59 @@ const Login = () => {
           }
       }
     return (  
-        <div  >
-            <div className="split left" >
-                <div className="centered">
-                {/* <img src ="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1280px-Image_created_with_a_mobile_phone.png" className='centered'/> */}
-                 <img src='https://iili.io/H2BfCox.jpg'/> 
-                </div>
+      <div className='black'>
+
+      <div className="limiter" >
+      <div className="container-login100">
+        <div className="wrap-login100">
+          <div className="login100-pic js-tilt" data-tilt>
+            <img src="https://iili.io/H2BfCox.jpg" alt="IMG"/>
+          </div>
+          { error && <div>{ error }</div> }
+              { isPending && <div>Loading...</div> }
+              { data && 
+          <form className="login100-form validate-form" onSubmit={handleSubmit}>
+            <span className="login100-form-title">
+              HII Hello Again!!
+            </span>
+  
+            <div className="wrap-input100 ">
+              <label>Username:</label>
+              <input 
+              className="input100"
+          type="text" 
+          required 
+          value={username}
+          onChange={(e) => setusername(e.target.value)}/>
+  
+  
             </div>
-            <div className="split right">
-                <div className="centered">
-                { error && <div>{ error }</div> }
-      { isPending && <div>Loading...</div> }
-      { data && 
-      <form onSubmit={handleSubmit}>
-        <div>
-          Hii Hello Again!!
-        </div>
-      <div><label>Username:</label>
-      <input 
-        type="text" 
-        required 
-        value={username}
-        onChange={(e) => setusername(e.target.value)}
-      />
+  
+            <div className="wrap-input100">
+              <label>Password:</label>
+              <input 
+              type="password" 
+              required 
+              value={password}
+              onChange={(e) => setpassword(e.target.value)}
+              />
+            </div>
+            
+            <div className="container-login100-form-btn">
+              <button className="login100-form-btn">
+                Login
+              </button>
+            </div>
+  
+            
+          </form>
+        }</div>
       </div>
-      <div className='tp'><label>Password:</label>
-      <input 
-        type="password" 
-        required 
-        value={password}
-        onChange={(e) => setpassword(e.target.value)}
-      />
     </div>
-    <div>
-    <button>Login</button>
-     </div> </form>
-      
-    }
-                    
-                </div>
-            </div>
-        </div>
+    </div>
+    
 
-
-    );
-}
- 
+    
+);
+      }
 export default Login;

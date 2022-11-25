@@ -1,15 +1,40 @@
 {
-    "data": [
-      {
-        "username": "Rohan",
-        "password":"123",
-        
-        "id": 1
-      },
-      {
-        "username": "Tanaya",
-        "password":"123",
-        "id": 2
-      }
-    ]
-  }
+  "data": [
+    {
+      "username": "Rohan",
+      "password": "123",
+      "phone": "7738854182",
+      "gender": "Male",
+      "Height": "170",
+      "Weight": "60",
+      "id": 1
+    },
+    {
+      "username": "Tanaya",
+      "password": "123",
+      "phone": "7720960038",
+      "gender": "Female",
+      "Height": "150",
+      "Weight": "45",
+      "id": 2
+    },
+    {
+      "username": "Om",
+      "password": "123",
+      "phone": "54586464",
+      "gender": "",
+      "height": "50",
+      "weight": "50",
+      "id": 3
+    },
+    {
+      "username": "Dhruvil",
+      "password": "555",
+      "phone": "4584",
+      "gender": "",
+      "height": "85484",
+      "weight": "484",
+      "id": 4
+    }
+  ]
+}
