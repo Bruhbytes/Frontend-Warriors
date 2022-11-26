@@ -2,9 +2,13 @@ import './App.css';
 import './index.css'
 import { useState } from "react";
 import useFetch from "./useFetch";
+import { useHistory } from "react-router-dom";
+
 // import userInfo from './data';
+import myimg from "./logo.jpg";
 
 const Login = () => {
+  let history = useHistory();
 
     const [username, setusername] = useState('');
     const [password, setpassword] = useState('');
@@ -20,8 +24,11 @@ const Login = () => {
           if(foundUser)
           {
               console.log("Success")
-              setusername('');
-              setpassword('');
+              history.push({
+                pathname: '/Community',
+                
+                state: { username: {username} }
+            });
           }
           else
           {
@@ -29,19 +36,19 @@ const Login = () => {
           }
       }
     return (  
-      <div className='black'>
+      
 
       <div className="limiter" >
-      <div className="container-login100">
-        <div className="wrap-login100">
+      <div className="blac">
+        <div className="cen">
           <div className="login100-pic js-tilt" data-tilt>
-            <img src="https://iili.io/H2BfCox.jpg" alt="IMG"/>
+            <img src={myimg}alt="IMG"/>
           </div>
           { error && <div>{ error }</div> }
               { isPending && <div>Loading...</div> }
               { data && 
           <form className="login100-form validate-form" onSubmit={handleSubmit}>
-            <span className="login100-form-title">
+            <span className="login100-form-title "style={{color:"green"}}>
               HII Hello Again!!
             </span>
   
@@ -59,6 +66,7 @@ const Login = () => {
   
             <div className="wrap-input100">
               <label>Password:</label>
+              <br/>
               <input 
               type="password" 
               required 
@@ -78,7 +86,7 @@ const Login = () => {
         }</div>
       </div>
     </div>
-    </div>
+    
     
 
     

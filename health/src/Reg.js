@@ -3,7 +3,7 @@ import "./index.css";
 import { useState } from "react";
 // import {  useHistory } from "react-router-dom";
 import useFetch from "./useFetch";
-
+import myimg from "./logo.jpg";
 const Reg = () => 
 {
   const [username, setusername] = useState("");
@@ -41,10 +41,10 @@ const Reg = () =>
     }    
   return (
     <div className="limiter">
-      <div className="container-login100">
-        <div className="wrap-login100">
+      <div className="blac">
+        <div className="cen">
           <div className="login100-pic js-tilt" data-tilt>
-            <img src="https://iili.io/H2BfCox.jpg" alt="IMG" />
+            <img src={myimg} alt="IMG" />
           </div>
           {error && <div>{error}</div>}
           {isPending && <div>Loading...</div>}
@@ -53,12 +53,12 @@ const Reg = () =>
               className="login100-form validate-form"
               onSubmit={handleSubmit}
             >
-              <span className="login100-form-title">New User??</span>
+              <span className="login100-form-title" style={{color:"green"}}>New User??</span>
 
-              <div className="wrap-input100 ">
-                <label>Username:</label>
+              <div className="wrap-input100 " >
+                <label >Username:</label>
                 <input
-                  className="input100"
+                  
                   type="text"
                   required
                   value={username}

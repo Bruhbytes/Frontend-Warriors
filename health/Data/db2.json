@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name":"Rohan",
+      "message":"What's Up"
+
+    },
+    {
+      "id": 2,
+      "name":"Tanaya",
+      "message":"Hey"
+
+    },
+    {
+      "id": 3,
+      "name":"Om",
+      "message":"Hello"
+
+    }
+
+  ]
+  
+}
