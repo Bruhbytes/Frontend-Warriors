@@ -2,23 +2,33 @@
   "posts": [
     {
       "id": 1,
-      "name":"Rohan",
-      "message":"What's Up"
-
+      "name": "Rohan",
+      "message": "What's Up"
     },
     {
       "id": 2,
-      "name":"Tanaya",
-      "message":"Hey"
-
+      "name": "Tanaya",
+      "message": "Hey"
     },
     {
       "id": 3,
-      "name":"Om",
-      "message":"Hello"
-
+      "name": "Om",
+      "message": "Hello"
+    },
+    {
+      "message": "bye",
+      "name": "Rohan",
+      "id": 4
+    },
+    {
+      "message": "hoi\n",
+      "name": "Rohan",
+      "id": 5
+    },
+    {
+      "message": "123",
+      "name": "Rohan",
+      "id": 6
     }
-
   ]
-  
 }

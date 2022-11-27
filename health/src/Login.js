@@ -1,20 +1,17 @@
 import './App.css';
 import './index.css'
-import { useState } from "react";
+import { useState, useContext } from "react";
 import useFetch from "./useFetch";
 import { useHistory } from "react-router-dom";
 
 // import userInfo from './data';
 import myimg from "./logo.jpg";
 
-const Login = () => {
-  let history = useHistory();
-
-    const [username, setusername] = useState('');
+const Login = ({UserContext}) => {
+    const {username, setUsername} = useContext(UserContext);
     const [password, setpassword] = useState('');
-    
     const { data, isPending,error } = useFetch('http://localhost:8000/data')
-
+    const history = useHistory();
     const handleSubmit = (e) => {
       console.log(username,password);
         e.preventDefault();
@@ -22,13 +19,12 @@ const Login = () => {
             obj.username === username && obj.password===password
         ))
           if(foundUser)
-          {
+          {   
+              console.log(username);
               console.log("Success")
               history.push({
-                pathname: '/Community',
-                
-                state: { username: {username} }
-            });
+                pathname:'/Community'
+              })
           }
           else
           {
@@ -59,7 +55,7 @@ const Login = () => {
           type="text" 
           required 
           value={username}
-          onChange={(e) => setusername(e.target.value)}/>
+          onChange={(e) => setUsername(e.target.value)}/>
   
   
             </div>
