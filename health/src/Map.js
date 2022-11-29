@@ -32,10 +32,10 @@ const options = {
   zoomControl: true,
 };
 const center = {
-  lat: 43.6532,
-  lng: -79.3832,
+  lat: 11.411707717671627,
+  lng: 76.70386855203184,
 };
-
+const google=window.google;
 export default function Map() {
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -67,13 +67,83 @@ export default function Map() {
 
   if (loadError) return "Error";
   if (!isLoaded) return "Loading...";
+  // center = { lat: latitude, lng: longitude };
+
+  let arr = [
+    {
+      lat: parseFloat(10.996885945028543),
+      lng: parseFloat(76.84890747788064),
+    },
+    {
+      lat: parseFloat(11.156203184010092),
+      lng: parseFloat(76.94183707237244),
+    },
+    {
+      lat: parseFloat(10.982281096523172),
+      lng: parseFloat(76.96912770761209),
+    },
+    {
+      lat: parseFloat(11.03464880196182),
+      lng: parseFloat(76.92851722240448),
+    },
+    {
+      lat: parseFloat(11.000891420109369),
+      lng: parseFloat(77.26263999938965),
+    },
+    {
+      lat: parseFloat(11.104983952002042),
+      lng: parseFloat(77.17503905296326),
+    },
+    {
+      lat: parseFloat(10.865970848144526),
+      lng: parseFloat(76.94056034088135),
+    },
+    {
+      lat: parseFloat(11.057862321256001),
+      lng: parseFloat(76.96551561355591),
+    },
+    {
+      lat: parseFloat(11.00849519876812),
+      lng: parseFloat(76.9562029838562),
+    },
+    {
+      lat: parseFloat(11.021198415195455),
+      lng: parseFloat(76.9642415111026),
+    },
+    {
+      lat: parseFloat(11.012581358848452),
+      lng: parseFloat(76.95064544677734),
+    },
+    {
+      lat: parseFloat(12.968956724393923),
+      lng: parseFloat(77.5019621542984),
+    },
+    {
+      lat: parseFloat(11.666357855938887),
+      lng: parseFloat(78.15791123331715),
+    },
+    {
+      lat: parseFloat(11.411707717671627),
+      lng: parseFloat(76.70386855203184),
+    },
+    {
+      lat: parseFloat(11.341583379711278),
+      lng: parseFloat(77.72509862710028),
+    },
+  ]; //get points of location of companies in this array
+  const homemarker = {
+    url: 'homemarker.png',
+    size: new google.maps.Size(33, 45),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(0, 32),
+  };
 
   return (
     <div>
       <h1>
-        Bears{" "}
+       Gyms{" "}
         <span role="img" aria-label="tent">
-          ⛺️
+        🏋️
         </span>
       </h1>
 
@@ -86,10 +156,14 @@ export default function Map() {
         zoom={8}
         center={center}
         options={options}
-        onClick={onMapClick}
+        // onClick={onMapClick}
         onLoad={onMapLoad}
       >
-        {markers.map((marker) => (
+        {arr.map((item) => {
+                    return <Marker position={item}></Marker>;
+                  })}
+                  <Marker position={center} icon={homemarker}></Marker>
+        {/* {markers.map((marker) => (
           <Marker
             key={`${marker.lat}-${marker.lng}`}
             position={{ lat: marker.lat, lng: marker.lng }}
@@ -122,7 +196,7 @@ export default function Map() {
               <p>Spotted {formatRelative(selected.time, new Date())}</p>
             </div>
           </InfoWindow>
-        ) : null}
+        ) : null} */}
       </GoogleMap>
     </div>
   );
@@ -158,7 +232,7 @@ function Search({ panTo }) {
     clearSuggestions,
   } = usePlacesAutocomplete({
     requestOptions: {
-      location: { lat: () => 43.6532, lng: () => -79.3832 },
+      location: { lat: () => 11.411707717671627, lng: () => 76.70386855203184 },
       radius: 100 * 1000,
     },
   });
