@@ -32,8 +32,8 @@ const options = {
   zoomControl: true,
 };
 const center = {
-  lat: 11.411707717671627,
-  lng: 76.70386855203184,
+  lat: 18.962309,
+  lng: 72.824232,
 };
 const google=window.google;
 export default function Map() {
@@ -54,7 +54,7 @@ export default function Map() {
       },
     ]);
   }, []);
-
+  const [selectedPark, setSelectedPark] = React.useState(null);
   const mapRef = React.useRef();
   const onMapLoad = React.useCallback((map) => {
     mapRef.current = map;
@@ -70,66 +70,31 @@ export default function Map() {
   // center = { lat: latitude, lng: longitude };
 
   let arr = [
-    {
-      lat: parseFloat(10.996885945028543),
-      lng: parseFloat(76.84890747788064),
-    },
-    {
-      lat: parseFloat(11.156203184010092),
-      lng: parseFloat(76.94183707237244),
-    },
-    {
-      lat: parseFloat(10.982281096523172),
-      lng: parseFloat(76.96912770761209),
-    },
-    {
-      lat: parseFloat(11.03464880196182),
-      lng: parseFloat(76.92851722240448),
-    },
-    {
-      lat: parseFloat(11.000891420109369),
-      lng: parseFloat(77.26263999938965),
-    },
-    {
-      lat: parseFloat(11.104983952002042),
-      lng: parseFloat(77.17503905296326),
-    },
-    {
-      lat: parseFloat(10.865970848144526),
-      lng: parseFloat(76.94056034088135),
-    },
-    {
-      lat: parseFloat(11.057862321256001),
-      lng: parseFloat(76.96551561355591),
-    },
-    {
-      lat: parseFloat(11.00849519876812),
-      lng: parseFloat(76.9562029838562),
-    },
-    {
-      lat: parseFloat(11.021198415195455),
-      lng: parseFloat(76.9642415111026),
-    },
-    {
-      lat: parseFloat(11.012581358848452),
-      lng: parseFloat(76.95064544677734),
-    },
-    {
-      lat: parseFloat(12.968956724393923),
-      lng: parseFloat(77.5019621542984),
-    },
-    {
-      lat: parseFloat(11.666357855938887),
-      lng: parseFloat(78.15791123331715),
-    },
-    {
-      lat: parseFloat(11.411707717671627),
-      lng: parseFloat(76.70386855203184),
-    },
-    {
-      lat: parseFloat(11.341583379711278),
-      lng: parseFloat(77.72509862710028),
-    },
+    {'lat': 18.968561, 'lng': 72.819914},
+{'lat': 19.147506, 'lng': 72.825037},
+{'lat': 19.111524, 'lng': 73.016909},
+{'lat': 19.146981, 'lng': 73.040165},
+{'lat': 18.967524, 'lng': 72.818802},
+{'lat': 18.963252, 'lng': 72.828612},
+{'lat': 18.961208, 'lng': 72.817204},
+{'lat': 18.971976, 'lng': 72.823451},
+{'lat': 18.983414, 'lng': 72.820552},
+{'lat': 18.972424, 'lng': 72.814812},
+{'lat': 18.96801, 'lng': 72.826462},
+{'lat': 18.974301, 'lng': 72.812647},
+{'lat': 18.976089, 'lng': 72.824589},
+{'lat': 18.965071, 'lng': 72.830265},
+{'lat': 18.987753, 'lng': 72.832508},
+{'lat': 18.980186, 'lng': 72.826818},
+{'lat': 18.981351, 'lng': 72.824232},
+{'lat': 18.968389, 'lng': 72.822679},
+{'lat': 19.131481, 'lng': 72.845149},
+{'lat': 18.969972, 'lng': 72.830288},
+{'lat': 18.973912, 'lng': 72.813728},
+{'lat': 18.962309, 'lng': 72.830157},
+{'lat': 18.961216, 'lng': 72.817205},
+{'lat': 18.965249, 'lng': 72.81269},
+
   ]; //get points of location of companies in this array
   const homemarker = {
     url: 'homemarker.png',
@@ -160,7 +125,11 @@ export default function Map() {
         onLoad={onMapLoad}
       >
         {arr.map((item) => {
-                    return <Marker position={item}></Marker>;
+                     return <Marker position={item}>
+                       onClick={() => {
+            setSelectedPark(item);
+          }}
+                     </Marker>;
                   })}
                   <Marker position={center} icon={homemarker}></Marker>
         {/* {markers.map((marker) => (
@@ -197,6 +166,21 @@ export default function Map() {
             </div>
           </InfoWindow>
         ) : null} */}
+        {selectedPark && (
+        <InfoWindow
+          onCloseClick={() => {
+            setSelectedPark(null);
+          }}
+          position={{
+           center
+          }}
+        >
+          <div>
+            <h2>HII</h2>
+            
+          </div>
+        </InfoWindow>
+      )}
       </GoogleMap>
     </div>
   );
@@ -232,7 +216,7 @@ function Search({ panTo }) {
     clearSuggestions,
   } = usePlacesAutocomplete({
     requestOptions: {
-      location: { lat: () => 11.411707717671627, lng: () => 76.70386855203184 },
+      location: { lat: () => 18.962309, lng: () => 72.824232},
       radius: 100 * 1000,
     },
   });
