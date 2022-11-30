@@ -70,30 +70,30 @@ export default function Map() {
   // center = { lat: latitude, lng: longitude };
 
   let arr = [
-    {'lat': 18.968561, 'lng': 72.819914},
-{'lat': 19.147506, 'lng': 72.825037},
-{'lat': 19.111524, 'lng': 73.016909},
-{'lat': 19.146981, 'lng': 73.040165},
-{'lat': 18.967524, 'lng': 72.818802},
-{'lat': 18.963252, 'lng': 72.828612},
-{'lat': 18.961208, 'lng': 72.817204},
-{'lat': 18.971976, 'lng': 72.823451},
-{'lat': 18.983414, 'lng': 72.820552},
-{'lat': 18.972424, 'lng': 72.814812},
-{'lat': 18.96801, 'lng': 72.826462},
-{'lat': 18.974301, 'lng': 72.812647},
-{'lat': 18.976089, 'lng': 72.824589},
-{'lat': 18.965071, 'lng': 72.830265},
-{'lat': 18.987753, 'lng': 72.832508},
-{'lat': 18.980186, 'lng': 72.826818},
-{'lat': 18.981351, 'lng': 72.824232},
-{'lat': 18.968389, 'lng': 72.822679},
-{'lat': 19.131481, 'lng': 72.845149},
-{'lat': 18.969972, 'lng': 72.830288},
-{'lat': 18.973912, 'lng': 72.813728},
-{'lat': 18.962309, 'lng': 72.830157},
-{'lat': 18.961216, 'lng': 72.817205},
-{'lat': 18.965249, 'lng': 72.81269},
+    {'lat': 18.968561, 'lng': 72.819914,"id":1},
+{'lat': 19.147506, 'lng': 72.825037,"id":2},
+{'lat': 19.111524, 'lng': 73.016909,"id":3},
+{'lat': 19.146981, 'lng': 73.040165,"id":4},
+{'lat': 18.967524, 'lng': 72.818802,"id":5},
+// {'lat': 18.963252, 'lng': 72.828612},
+// {'lat': 18.961208, 'lng': 72.817204},
+// {'lat': 18.971976, 'lng': 72.823451},
+// {'lat': 18.983414, 'lng': 72.820552},
+// {'lat': 18.972424, 'lng': 72.814812},
+// {'lat': 18.96801, 'lng': 72.826462},
+// {'lat': 18.974301, 'lng': 72.812647},
+// {'lat': 18.976089, 'lng': 72.824589},
+// {'lat': 18.965071, 'lng': 72.830265},
+// {'lat': 18.987753, 'lng': 72.832508},
+// {'lat': 18.980186, 'lng': 72.826818},
+// {'lat': 18.981351, 'lng': 72.824232},
+// {'lat': 18.968389, 'lng': 72.822679},
+// {'lat': 19.131481, 'lng': 72.845149},
+// {'lat': 18.969972, 'lng': 72.830288},
+// {'lat': 18.973912, 'lng': 72.813728},
+// {'lat': 18.962309, 'lng': 72.830157},
+// {'lat': 18.961216, 'lng': 72.817205},
+// {'lat': 18.965249, 'lng': 72.81269},
 
   ]; //get points of location of companies in this array
   const homemarker = {
@@ -125,11 +125,10 @@ export default function Map() {
         onLoad={onMapLoad}
       >
         {arr.map((item) => {
-                     return <Marker position={item}>
-                       onClick={() => {
-            setSelectedPark(item);
-          }}
-                     </Marker>;
+
+                     return <div key ={item.id}><Marker position={item}>
+                      
+                     </Marker></div>;
                   })}
                   <Marker position={center} icon={homemarker}></Marker>
         {/* {markers.map((marker) => (
@@ -166,7 +165,7 @@ export default function Map() {
             </div>
           </InfoWindow>
         ) : null} */}
-        {selectedPark && (
+        {/* {selectedPark && (
         <InfoWindow
           onCloseClick={() => {
             setSelectedPark(null);
@@ -180,7 +179,7 @@ export default function Map() {
             
           </div>
         </InfoWindow>
-      )}
+      )} */}
       </GoogleMap>
     </div>
   );
