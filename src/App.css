@@ -82,3 +82,64 @@
   z-index: 50;
   position: absolute ;
 }
+.heart{
+  margin: 150px;
+    display: flex;
+    height: 100px;
+    width: 35%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    flex-direction: column;
+}
+.consultation{
+  margin: 400px;
+    display: flex;
+    height: 100px;
+    width: 35%;
+    position: relative;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.exercise{
+  margin: 500px;
+    height: 100px;
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    width: 35%;
+    align-items: flex-start;
+}
+.shop{
+  position: inherit;
+    margin: 150px;
+    height: 100px;
+    /* padding-block-start: 100px; */
+    display: flex;
+    width: 35%;
+    z-index: 10;
+    flex-direction: column;
+
+
+}
+.abbg{
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-color: black;
+    height: 400vh;
+    width: 150vw;
+    position:absolute;
+    top:auto;
+    left: 0%;
+    z-index: 0;
+}
+.abouthead{
+  position: relative;
+  z-index: 10;
+  justify-content: center;
+    display: flex;
+   color: lightblue;
+  
+}

@@ -77,3 +77,6 @@ div
   /* border-radius: 50%; */
   background-color: aqua;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

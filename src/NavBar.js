@@ -12,13 +12,13 @@ function NavBar () {
             <Navbar.Brand href="#home"><img id="logoImg-n" src={myImg}/></Navbar.Brand>
               <Nav className="me-auto">
               
-                <Nav.Link href="#Home">Home</Nav.Link>
+                <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="#Heart">Is your heart fit?</Nav.Link>
                 <Nav.Link href="#Community">Community</Nav.Link>
-                <Nav.Link href="#Gyms">Gyms</Nav.Link>
+                <Nav.Link href="#pulsetransform">Pulse Transform</Nav.Link>
                 <Nav.Link href="#dr">Consult doctor</Nav.Link>
                 <Nav.Link href="#shop">Shop</Nav.Link>  
-                <Nav.Link href="#about">about us</Nav.Link>  
+                <Nav.Link href="/about">about us</Nav.Link>  
               </Nav>
           </Container>
         </Navbar>
