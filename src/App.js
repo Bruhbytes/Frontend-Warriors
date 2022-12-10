@@ -5,6 +5,7 @@ import Home from './Home';
 import About from './About';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Shop from './Shop';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
             </Route>
             <Route path="/about">
               <About/> 
+            </Route>
+            <Route exact path="/Shop">
+              <Shop/> 
             </Route>
           </Switch>
         </Router>

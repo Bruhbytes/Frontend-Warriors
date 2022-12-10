@@ -17,7 +17,7 @@ function NavBar () {
                 <Nav.Link href="#Community">Community</Nav.Link>
                 <Nav.Link href="#pulsetransform">Pulse Transform</Nav.Link>
                 <Nav.Link href="#dr">Consult doctor</Nav.Link>
-                <Nav.Link href="#shop">Shop</Nav.Link>  
+                <Nav.Link href="/shop">Shop</Nav.Link>  
                 <Nav.Link href="/about">about us</Nav.Link>  
               </Nav>
           </Container>
