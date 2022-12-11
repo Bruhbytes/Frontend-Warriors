@@ -37,6 +37,9 @@ const Shop = () => {
           <h2>our shop</h2>
           <div className="underline"></div>
         </div>
+        <>
+        <img src="./prodpics/dumbell.jpg"/>
+        </>
         
         
         

@@ -1,6 +1,8 @@
 import React  from "react";
 //import Products from "./Products";
-import 'flowbite';
+import 'flowbite'; 
+
+
 const ProductsList = ({ Products }) => {
      return (
 
@@ -10,6 +12,8 @@ const ProductsList = ({ Products }) => {
         return (
           <article key={itemId} className='menu-item'>
             <img src={itemImg} alt={itemName} className='photo' />
+
+            
             <div className='item-info'>
               <header>
                 <h4>{itemName}</h4>

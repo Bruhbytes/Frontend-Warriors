@@ -1,12 +1,17 @@
-
-
+import db from "./prodpics/dumbell.jpg"
+import ym from "./prodpics/yoga mat.jpg"
+import shoes from "./prodpics/shoes.jpg"
+import tshirt from "./prodpics/tshirt.jpg"
+import yogapants  from "./prodpics/leggins.jpg"
+import protpowder from "./prodpics/protpowder.jpg"
+import energyDrink from "./prodpics/energy drink.jpg"
     const Products =[
         {
             "itemCategory":"equipments",
             "itemName":"dumbell",
             "itemId":"1",
             "itemDescription":"lorem ipsum ",
-            "itemImg":"./prodpics/dumbell.jpg",
+            "itemImg":db,
             "price": "100"
         },
         {
@@ -14,7 +19,7 @@
             "itemName":"yoga mat",
             "itemId":"2",
             "itemDescription":"lorem ipsum ",
-            "itemImg":"./prodpics/yoga mat.jpg",
+            "itemImg":ym,
             "price": "100"
 
         },
@@ -23,7 +28,7 @@
             "itemName":"shoes",
             "itemId":"3",
             "itemDescription":"lorem ipsum ",
-            "itemImg":"./prodpics/shoes.jpg",
+            "itemImg":shoes,
             "price": "100"
             
         },
@@ -32,7 +37,7 @@
             "itemName":"t-shirt",
             "itemId":"4",
             "itemDescription":"lorem ipsum ",
-            "itemImg":"./prodpics/shoes.jpg",
+            "itemImg":tshirt,
             "price": "100"
 
         },
@@ -41,7 +46,7 @@
             "itemName":"leggins",
             "itemId":"5",
             "itemDescription":"lorem ipsum ",
-            "itemImg":"./prodpics/leggins.jpg",
+            "itemImg":yogapants,
             "price": "100"
             
         },
@@ -50,7 +55,7 @@
             "itemName":"whey protein powder",
             "itemId":"6",
             "itemDescription":"lorem ipsum ",
-            "itemImg":"./prodpics/protpowder.jpg",
+            "itemImg":protpowder,
             "price": "100"
 
         },
@@ -59,7 +64,7 @@
             "itemName":"energy drinks",
             "itemId":"7",
             "itemDescription":"lorem ipsum ", 
-            "itemImg":"./prodpics/energy drink.jpg",
+            "itemImg":energyDrink,
             "price": "100"
             
         },
