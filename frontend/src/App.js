@@ -17,6 +17,10 @@ import Create from './components/Create'
 import Under from './components/Under_S'
 import Normal from './components/Normal'
 import Overweight from './components/Overweight'
+import Home2 from './pages/Home2'
+import Contact from './pages/Contact'
+import About from './pages/About'
+
 // import './App.css';
 
 function App() {
@@ -28,6 +32,18 @@ function App() {
         <Navbar2 />
         <div className="pages">
           <Routes>
+          <Route 
+              exact path="/" 
+              element={user ? <Home2 /> : <Navigate to="/login" />} 
+            />
+<Route 
+              path="/about" 
+              element={user ? <About /> : <Navigate to="/login" />} 
+            />
+            <Route 
+              path="/contact" 
+              element={user ? <Contact /> : <Navigate to="/login" />} 
+            />
             <Route 
               path="/community" 
               element={user ? <Home /> : <Navigate to="/login" />} 

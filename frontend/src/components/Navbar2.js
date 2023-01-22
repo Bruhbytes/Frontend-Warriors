@@ -20,7 +20,7 @@ const Navbar2 = () => {
         <Navbar bg="dark" variant="dark">
           <Container>
           
-          <Navbar.Brand href="#home"><img id="logoImg-n" src={myImg}/></Navbar.Brand>
+          <Navbar.Brand href="/"><img id="logoImg-n" src={myImg}/></Navbar.Brand>
               <Nav className="me-auto">
               {user && (
             <>
@@ -41,6 +41,12 @@ const Navbar2 = () => {
               <span className='hi'><Link to="/bmi"
               style={{ textDecoration: 'none',
               color:"white" }}> BMI</Link></span>
+              <span className='hi'><Link to="/contact"
+              style={{ textDecoration: 'none',
+              color:"white" }}> ContactUs</Link></span>
+              <span className='hi'><Link to="/about"
+              style={{ textDecoration: 'none',
+              color:"white" }}> AboutUs</Link></span>
              <span className='hi'><button onClick={handleClick}
               style={{ textDecoration: 'none',
               color:"white" }}>Log out</button></span> 
