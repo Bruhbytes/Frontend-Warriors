@@ -1,4 +1,5 @@
 import React from "react";
+import "../index.css"
 import {
   GoogleMap,
   useLoadScript,
@@ -192,7 +193,7 @@ export default function Map() {
 function Locate({ panTo }) {
   return (
     <button
-      className="locate"
+      className="locate hello"
       onClick={() => {
         navigator.geolocation.getCurrentPosition(
           (position) => {

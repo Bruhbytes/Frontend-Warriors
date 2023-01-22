@@ -24,33 +24,36 @@ const Navbar2 = () => {
               <Nav className="me-auto">
               {user && (
             <>
-              <span
+              <span className='hi'
               style={{ textDecoration: 'none',
               color:"white" }}>{user.email}</span>
               {/* <Nav.Link href="/appointment">Appointment</Nav.Link>
                 <Nav.Link href="/map">FindGymsNearYou</Nav.Link> */}
-                <Link to="/appointment"
+                <span className='hi'><Link to="/appointment"
                 style={{ textDecoration: 'none',
-                color:"white" }}>  _Appointment_ </Link>
-              <Link to="/map"
+                color:"white" }}>  Appointment </Link></span>
+              <span className='hi'><Link to="/map"
               style={{ textDecoration: 'none',
-              color:"white" }}>  FindGymsNearYou_ </Link>
-              <Link to="/community"
+              color:"white" }}>  FindGymsNearYou </Link></span>
+              <span className='hi'><Link to="/community"
               style={{ textDecoration: 'none',
-              color:"white" }}> Community_ </Link>
-              <button onClick={handleClick}
+              color:"white" }}> Community </Link></span>
+              <span className='hi'><Link to="/bmi"
               style={{ textDecoration: 'none',
-              color:"white" }}>Log out</button>
+              color:"white" }}> BMI</Link></span>
+             <span className='hi'><button onClick={handleClick}
+              style={{ textDecoration: 'none',
+              color:"white" }}>Log out</button></span> 
               </>
           )}
           {!user && (
             <div>
-              <Link to="/login"
+             <span className='hi'><Link to="/login"
               style={{ textDecoration: 'none',
-              color:"white" }}>Login</Link>
-              <Link to="/signup"
+              color:"white" }}>Login</Link></span>
+             <span className='hi'> <Link to="/signup"
               style={{ textDecoration: 'none',
-              color:"white" }}>Signup</Link>
+              color:"white" }}>Signup</Link></span>
             </div>
           )}
                 {/* <Nav.Link href="/">Home</Nav.Link>

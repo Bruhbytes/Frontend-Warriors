@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const workoutRoutes = require('./routes/workouts')
 const userRoutes = require('./routes/user')
 const appointmentRoutes = require('./routes/appointment')
+const healthRoutes = require('./routes/healthroutes');
 const Workout = require('./models/workoutModel')
 const Workoutnew = require('./models/workoutModel2')
 const Appointment = require('./models/appointmentModel')
@@ -112,6 +113,7 @@ app.use((req, res, next) => {
 app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/doctor', appointmentRoutes)
+app.use('/h', healthRoutes);
 // connect to db
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {

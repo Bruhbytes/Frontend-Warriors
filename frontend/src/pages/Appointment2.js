@@ -116,7 +116,7 @@ if(json==="Appointment exists")
                   required=""
                 />
               </div>
-              <div className="md:ml-2">
+              {/* <div className="md:ml-2">
                 <label
                   className="block mb-2 text-sm font-bold text-gray-700"
                   htmlFor="lastName"
@@ -131,7 +131,7 @@ if(json==="Appointment exists")
                   placeholder="Last Name"
                   required=""
                 />
-              </div>
+              </div> */}
             </div>
             
             <div className="mb-4 md:flex md:justify-between">

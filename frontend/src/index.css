@@ -243,6 +243,15 @@ div
     margin: auto;
   }
     */
+.hello
+{
+  margin-top: 100px;
+  background-color: blue;
+}
+.home
+{
+  margin-top: 77px;
+}
 
 @tailwind base;
 @tailwind components;
