@@ -42,19 +42,19 @@ function App() {
             />
             <Route 
               exact path="/shop" 
-              element={<EcomHome /> } 
+              element={user?<EcomHome />: <Navigate to="/login" /> } 
             />
             <Route 
               exact path="/products/:category" 
-              element={<ProductList /> } 
+              element={user?<ProductList />: <Navigate to="/login" /> } 
             />
             <Route 
               exact path="/product/:id" 
-              element={<Product /> } 
+              element={user?<Product /> : <Navigate to="/login" />} 
             />
              <Route 
               exact path="/cart" 
-              element={ <Cart />} 
+              element={user? <Cart />: <Navigate to="/login" />} 
             />
 <Route 
               path="/about" 

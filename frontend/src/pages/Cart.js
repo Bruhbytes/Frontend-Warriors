@@ -180,6 +180,12 @@ const Cart = () => {
   }
   )
   const json =await response.json()
+  console.log(json);
+  if(response.ok)
+  {
+    setAddress('');
+    setPh('');
+  }
   console.log("done post");  
 };
   return (
