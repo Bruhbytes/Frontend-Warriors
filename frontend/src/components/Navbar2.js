@@ -20,7 +20,7 @@ const Navbar2 = () => {
         <Navbar bg="dark" variant="dark">
           <Container>
           
-          <Navbar.Brand href="/"><img id="logoImg-n" src={myImg}/></Navbar.Brand>
+          <Link to="/"><img id="logoImg-n" src={myImg}/></Link>
               <Nav className="me-auto">
               {user && (
             <>
@@ -35,6 +35,9 @@ const Navbar2 = () => {
               <span className='hi'><Link to="/map"
               style={{ textDecoration: 'none',
               color:"white" }}>  FindGymsNearYou </Link></span>
+               <span className='hi'><Link to="/shop"
+              style={{ textDecoration: 'none',
+              color:"white" }}>  Shop </Link></span>
               <span className='hi'><Link to="/community"
               style={{ textDecoration: 'none',
               color:"white" }}> Community </Link></span>

@@ -86,7 +86,7 @@ if(json==="Appointment exists")
           //className="contact"
           style={{
             width:'600px',
-            backgroundImage:
+            background:
               'url("https://th.bing.com/th/id/OIP.3AQguUw_g2ferUROBL9sxAHaE7?pid=ImgDet&w=1000&h=666&rs=1")'
             
           }}

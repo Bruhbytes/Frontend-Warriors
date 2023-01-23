@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useAuthContext } from './hooks/useAuthContext'
-
+import './App.css';
 // pages & components
 import Home from './pages/Home'
 import Login2 from './pages/Login2'
@@ -20,6 +20,10 @@ import Overweight from './components/Overweight'
 import Home2 from './pages/Home2'
 import Contact from './pages/Contact'
 import About from './pages/About'
+import EcomHome from './pages/EcomHome';
+import ProductList from './pages/ProductList';
+import Product from './pages/Product';
+import Cart from './pages/Cart';
 
 // import './App.css';
 
@@ -35,6 +39,22 @@ function App() {
           <Route 
               exact path="/" 
               element={user ? <Home2 /> : <Navigate to="/login" />} 
+            />
+            <Route 
+              exact path="/shop" 
+              element={<EcomHome /> } 
+            />
+            <Route 
+              exact path="/products/:category" 
+              element={<ProductList /> } 
+            />
+            <Route 
+              exact path="/product/:id" 
+              element={<Product /> } 
+            />
+             <Route 
+              exact path="/cart" 
+              element={ <Cart />} 
             />
 <Route 
               path="/about" 
