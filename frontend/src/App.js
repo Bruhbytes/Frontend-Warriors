@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate, Form } from 'react-router-dom'
 import { useAuthContext } from './hooks/useAuthContext'
 import './App.css';
 // pages & components
@@ -25,6 +25,7 @@ import EcomHome from './pages/EcomHome';
 import ProductList from './pages/ProductList';
 import Product from './pages/Product';
 import Cart from './pages/Cart';
+import PredictForm from './components/PredictForm';
 
 // import './App.css';
 
@@ -37,59 +38,60 @@ function App() {
         <Navbar2 />
         <div className="pages">
           <Routes>
-          <Route 
-              exact path="/" 
-              element={user ? <Home2 /> : <Navigate to="/login" />} 
+            <Route
+              exact path="/"
+              element={user ? <Home2 /> : <Navigate to="/login" />}
             />
-            <Route 
-              exact path="/shop" 
-              element={user?<EcomHome />: <Navigate to="/login" /> } 
+            <Route
+              exact path="/shop"
+              element={user ? <EcomHome /> : <Navigate to="/login" />}
             />
-            <Route 
-              exact path="/products/:category" 
-              element={user?<ProductList />: <Navigate to="/login" /> } 
+            <Route
+              exact path="/products/:category"
+              element={user ? <ProductList /> : <Navigate to="/login" />}
             />
-            <Route 
-              exact path="/product/:id" 
-              element={user?<Product /> : <Navigate to="/login" />} 
+            <Route
+              exact path="/product/:id"
+              element={user ? <Product /> : <Navigate to="/login" />}
             />
-             <Route 
-              exact path="/cart" 
-              element={user? <Cart />: <Navigate to="/login" />} 
+            <Route
+              exact path="/cart"
+              element={user ? <Cart /> : <Navigate to="/login" />}
             />
-<Route 
-              path="/about" 
-              element={user ? <About /> : <Navigate to="/login" />} 
+            <Route
+              path="/about"
+              element={user ? <About /> : <Navigate to="/login" />}
             />
-            <Route 
-              path="/contact" 
-              element={user ? <Contact /> : <Navigate to="/login" />} 
+            <Route
+              path="/contact"
+              element={user ? <Contact /> : <Navigate to="/login" />}
             />
-            <Route 
-              path="/community" 
-              element={user ? <Home /> : <Navigate to="/login" />} 
+            <Route
+              path="/community"
+              element={user ? <Home /> : <Navigate to="/login" />}
             />
-            <Route 
-              path="/login" 
-              element={!user ? <Login2 /> : <Navigate to="/" />} 
+            <Route
+              path="/login"
+              element={!user ? <Login2 /> : <Navigate to="/" />}
             />
-            <Route 
-              path="/signup" 
-              element={!user ? <Signup2 /> : <Navigate to="/" />} 
+            <Route
+              path="/signup"
+              element={!user ? <Signup2 /> : <Navigate to="/" />}
             />
-            <Route path="bmi" element={user? <BMI /> : <Navigate to="/login" />}></Route>
-            <Route 
-              path="/appointment" 
-              element={user ? <Appointment2 /> : <Navigate to="/login" />} 
+            <Route path="bmi" element={user ? <BMI /> : <Navigate to="/login" />}></Route>
+            <Route
+              path="/appointment"
+              element={user ? <Appointment2 /> : <Navigate to="/login" />}
             />
-             <Route path="/calculate" element={user? <Create2 /> : <Navigate to="/login" />}></Route>
-          <Route path="/underweight" element={user? <Under /> : <Navigate to="/login" />}></Route>
-          <Route path="/normal" element={user? <Normal /> : <Navigate to="/login" />}></Route>
-          <Route path="/overweight" element={user? <Overweight /> : <Navigate to="/login" />}></Route>
+            <Route path="/calculate" element={user ? <Create2 /> : <Navigate to="/login" />}></Route>
+            <Route path="/underweight" element={user ? <Under /> : <Navigate to="/login" />}></Route>
+            <Route path="/normal" element={user ? <Normal /> : <Navigate to="/login" />}></Route>
+            <Route path="/overweight" element={user ? <Overweight /> : <Navigate to="/login" />}></Route>
+            <Route path="/prediction" element={<PredictForm />}></Route>
 
-            <Route 
-              path="/map" 
-              element={user ? <Map/> : <Navigate to="/login" />} 
+            <Route
+              path="/map"
+              element={user ? <Map /> : <Navigate to="/login" />}
             />
           </Routes>
         </div>

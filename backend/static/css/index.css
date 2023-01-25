@@ -1,0 +1,68 @@
+.create {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.create label {
+    text-align: left;
+    display: block;
+}
+
+.create h2 {
+    font-size: 30px;
+    color: #f1356d;
+    margin-bottom: 30px;
+}
+
+.create input,
+.create textarea,
+.create select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+}
+
+.create button {
+    background: #f1356d;
+    color: #fff;
+    border: 0;
+    /* padding: 8px; */
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 1.5em;
+}
+
+input[type="radio"] {
+    /* ...existing styles */
+
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+.parameters {
+    font-size: 25px;
+    display: inline;
+}
+
+.create h3 {
+    font-weight: normal;
+}
