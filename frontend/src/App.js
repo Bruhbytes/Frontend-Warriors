@@ -14,6 +14,7 @@ import Appointment2 from './pages/Appointment2'
 import Map from './pages/Map'
 import BMI from './pages/BMI'
 import Create from './components/Create'
+import Create2 from './components/Create2'
 import Under from './components/Under_S'
 import Normal from './components/Normal'
 import Overweight from './components/Overweight'
@@ -81,7 +82,7 @@ function App() {
               path="/appointment" 
               element={user ? <Appointment2 /> : <Navigate to="/login" />} 
             />
-             <Route path="/calculate" element={user? <Create /> : <Navigate to="/login" />}></Route>
+             <Route path="/calculate" element={user? <Create2 /> : <Navigate to="/login" />}></Route>
           <Route path="/underweight" element={user? <Under /> : <Navigate to="/login" />}></Route>
           <Route path="/normal" element={user? <Normal /> : <Navigate to="/login" />}></Route>
           <Route path="/overweight" element={user? <Overweight /> : <Navigate to="/login" />}></Route>

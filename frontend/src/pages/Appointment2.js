@@ -94,7 +94,8 @@ if(json==="Appointment exists")
         {/* Col */}
         <div className="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none"
        >
-          <h3 className="pt-4 text-2xl text-center"><h3>Take an appointment:</h3></h3>
+          <h3 className="pt-4 text-2xl text-center"><h3
+           style={{color:"black"}}>Take an appointment:</h3></h3>
           <form  onSubmit={handleSubmit}>
 
             <div className="mb-4 md:flex md:justify-between">

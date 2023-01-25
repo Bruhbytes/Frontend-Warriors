@@ -16,7 +16,7 @@ const Navbar2 = () => {
 
   return (
     <>
-      <div className='navbar'>
+      
         <Navbar bg="dark" variant="dark">
           <Container>
           
@@ -63,7 +63,7 @@ const Navbar2 = () => {
              <span className='hi'> <Link to="/signup"
               style={{ textDecoration: 'none',
               color:"white" }}>Signup</Link></span>
-            </div>
+          </div>
           )}
                 {/* <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="#Heart">Is your heart fit?</Nav.Link>
@@ -77,7 +77,7 @@ const Navbar2 = () => {
               </Nav>
           </Container>
         </Navbar>
-      </div>
+     
     </>
   )
 }

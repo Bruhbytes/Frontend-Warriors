@@ -1,10 +1,10 @@
-import "./BMI.css"
+ import "./Normal.css"
 const Overweight = () => {
     const url = window.location.href;
     const bmi = url.split('=')[1];
     return (
         <div className="overweight">
-            <h1 className="bmiheader">BMI: {bmi}</h1>
+            <h1 className="bmiheader"  style={{color:"black"}}>BMI: {bmi}</h1>
             <h2>OVERWEIGHT</h2>
             <img src="https://previews.123rf.com/images/nlshop1/nlshop11602/nlshop1160200165/52578532-cartoon-overweight-man.jpg"></img>
             <p> Preventing obesity helps you reduce your risk of a host of associated health issues, from heart disease to diabetes to some cancers and much more.

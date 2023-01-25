@@ -110,7 +110,8 @@ export default function Map() {
 
   return (
     <div>
-      <h1>
+      <h1
+      style={{color:"#011f4b"}}>
        Gyms{" "}
         <span role="img" aria-label="tent">
         🏋️
@@ -206,7 +207,7 @@ function Locate({ panTo }) {
         );
       }}
     >
-      <img src="/compass.svg" alt="compass" />
+      <img src="https://th.bing.com/th/id/OIP.KsZ4f8AlmDuxvjjA2jfyYAHaHa?w=188&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7"/>
     </button>
   );
 }

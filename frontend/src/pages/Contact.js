@@ -49,7 +49,8 @@ const Pass = () => {
         />
         {/* Col */}
         <div className="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
-          <h3 className="pt-4 text-2xl text-center"><h3>Hello,Contact us:</h3></h3>
+          <h3 className="pt-4 text-2xl text-center"><h3
+           style={{color:"black"}}>Hello,Contact us:</h3></h3>
           <form ref={form} onSubmit={handleSubmit}>
 
             <div className="mb-4 md:flex md:justify-between">

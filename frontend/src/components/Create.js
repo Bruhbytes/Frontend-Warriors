@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from '../hooks/useAuthContext'
-import "./BMI.css"
+// import "./BMI.css"
 const Create = () => {
     const [age, setAge] = useState('');
     const [gender, setGender] = useState('Male');
@@ -115,7 +115,9 @@ const Create = () => {
             />
             <button>Calculate</button>
         </form>
-    </div>);
+    </div>
+    
+    );
 }
 
 export default Create;

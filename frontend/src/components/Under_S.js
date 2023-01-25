@@ -1,4 +1,4 @@
-import "./BMI.css"
+ import "./Normal"
 const Under = () => {
     // mongoose.connect(process.env.MONGO_URI, {
     //     useNewUrlParser: true,
@@ -11,8 +11,8 @@ const Under = () => {
     const bmi = url.split('=')[1];
     // const { articleId } = useParams();
     // console.log(articleId); // 123
-    return (<div className="under">
-        <h1 className="bmiheader">BMI: {bmi}</h1>
+    return (<div className="overweight">
+        <h1 className="bmiheader"  style={{color:"black"}}>BMI: {bmi}</h1>
         <h2>UNDERWEIGHT</h2>
         <img src="https://img.freepik.com/premium-vector/skinny-sad-kid-boy-use-weight-scale-vector_753212-7.jpg?w=2000"></img>
         <p> Since you are underweight, you may be at greater risk of certain health conditions, including malnutrition, osteoporosis, decreased muscle strength, hypothermia and lowered immunity. </p>

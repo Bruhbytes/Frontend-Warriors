@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./BMI.css"
+
 const Home = () => {
     const [healthParameters, setParameters] = useState(null)
 
@@ -17,59 +18,149 @@ const Home = () => {
         fetchParameters();
     }, [])
     return (
-        <div className="home-content">
-            <p>The Body Mass Index (BMI) Calculator can be used to calculate BMI value and corresponding weight status while taking age into consideration. Use the "Metric Units" tab for the International System of Units or the "Other Units" tab to convert units into either US or metric units. Note that the calculator also computes the Ponderal Index in addition to BMI, both of which are discussed below in detail.</p>
-            <h3>BMI Introduction</h3>
-            <p>BMI is a measurement of a person's leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. It is widely used as a general indicator of whether a person has a healthy body weight for their height. Specifically, the value obtained from the calculation of BMI is used to categorize whether a person is underweight, normal weight, overweight, or obese depending on what range the value falls between. These ranges of BMI vary based on factors such as region and age, and are sometimes further divided into subcategories such as severely underweight or very severely obese. Being overweight or underweight can have significant health effects, so while BMI is an imperfect measure of healthy body weight, it is a useful indicator of whether any additional testing or action is required. Refer to the table below to see the different categories based on BMI that are used by the calculator.</p>
-            <h3>BMI Table for Adults</h3>
-            <p>This is the World Health Organization's (WHO) recommended body weight based on BMI values for adults. It is used for both men and women, age 20 or older.</p>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Category</th>
-                        <th>BMI range - kg/m<sup>2</sup></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Severe Thinness</td>
-                        <td>&lt; 16</td>
-                    </tr>
+<>
+            <div className="cards">
+  <div className="mohatsavcard1"> 
+      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+      <img
+        className="rounded-t-lg"
+        src="https://api.parashospitals.com/uploads/2016/10/What-Should-Be-Ideal-BMI.jpg"
+        alt=""
+      />
+    </a>
+    <div className="p-5">
+      <a href="#">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        style={{color:"black"}}>
+          BMI introduction
+        </h5>
+      </a>
+      <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+      BMI is a measurement of a person's leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. It is widely used as a general indicator of whether a person has a healthy body weight for their height. 😀
+      </p>
+      <a
+        href="https://study.com/academy/lesson/what-is-bmi-definition-formula-calculation.html"
+        className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        Read more
+        <svg
+          aria-hidden="true"
+          className="w-4 h-4 ml-2 -mr-1"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+  </div>
+=
 
-                    <tr>
-                        <td>Moderate Thinness</td>
-                        <td>16 - 17</td>
-                    </tr>
-                    <tr>
-                        <td>Mild Thinness</td>
-                        <td>17 - 18.5</td>
-                    </tr>
-                    <tr>
-                        <td>Normal</td>
-                        <td>18.5 - 25</td>
-                    </tr>
-                    <tr>
-                        <td>Overweight</td>
-                        <td>25 - 30</td>
-                    </tr>
-                    <tr>
-                        <td>Obese Class I</td>
-                        <td>30 - 35</td>
-                    </tr>
-                    <tr>
-                        <td>Obese Class II</td>
-                        <td>35 - 40</td>
-                    </tr>
-                    <tr>
-                        <td>Obese Class III</td>
-                        <td>&gt; 40</td>
-                    </tr>
-                </tbody>
-            </table>
+ 
+  <div className="mohatsavcard2"> 
+      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+      <img
+        className="rounded-t-lg"
+        src="https://www.rd.com/wp-content/uploads/2019/05/food-healthy.jpg"
+        alt=""
+      />
+    </a>
+    <div className="p-5">
+      <a href="#">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        style={{color:"black"}}>
+          healthy diet
+        </h5>
+      </a>
+      <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+      Consuming a healthy diet throughout the life-course helps to prevent malnutrition in all its forms as well as a range of noncommunicable diseases (NCDs) and conditions.
+      </p>
+      <a
+        href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet"
+        className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        Read more
+        <svg
+          aria-hidden="true"
+          className="w-4 h-4 ml-2 -mr-1"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+  </div>
+
+  
+
+  <div className="mohatsavcard3"> 
+      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+      <img
+        className="rounded-t-lg"
+        src="https://thehomoeopathy.in/wp-content/uploads/2021/07/BMI_Chart_adult_image.png"
+        alt=""
+      />
+    </a>
+    <div className="p-5">
+      <a href="#">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        style={{color:"black"}}>
+        BMI Table for Adults
+        </h5>
+      </a>
+      <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+      Many factors can contribute to a person’s weight. These factors include environment, family history and genetics, metabolism, and behavior or habits.
+      </p>
+      <a
+        href="https://www.bing.com/ck/a?!&&p=ad745acbacd49258JmltdHM9MTY3NDUxODQwMCZpZ3VpZD0yYjllNWNjYy02YzMzLTZjY2QtMmE3MS00ZGRhNmQ4MTZkNTkmaW5zaWQ9NTE4MA&ptn=3&hsh=3&fclid=2b9e5ccc-6c33-6ccd-2a71-4dda6d816d59&psq=bmi+table+tell+us&u=a1aHR0cDovL25obGJpLm5paC5nb3YvaGVhbHRoL2VkdWNhdGlvbmFsL2xvc2Vfd3QvQk1JL2JtaWNhbGMuaHRt&ntb=1"
+        className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        Read more
+        <svg
+          aria-hidden="true"
+          className="w-4 h-4 ml-2 -mr-1"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  
+
+  
+            
+
             <Link to="/calculate">
                 <button className="bmi" role={"button"}>Calculate BMI</button>
             </Link>
-        </div>
+       
+            </>
     );
 }
 
