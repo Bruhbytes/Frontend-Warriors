@@ -1,6 +1,6 @@
 import { useState } from "react";
 const PredictForm = () => {
-    const [sub, setSub] = useState('');
+    const [sub, setSub] = useState(0);
     const [Age, setAge] = useState('');
     const [SysBP, setSysBP] = useState('');
     const [DiaBP, setDiaBP] = useState('');
@@ -25,13 +25,15 @@ const PredictForm = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ Age, SysBP, DiaBP, HR, Glucose, TotChol, CiggsperDay, CurrSmok, BPMeds, Diab })
+            body: JSON.stringify({ Age, SysBP, DiaBP, HR, Glucose, TotChol, CiggsperDay, CurrSmok, BPMeds, Diab }),
+            
         })
             .then(response => response.json())
             .then(body => {
                 setResult(body)
                 console.log(result)
                 setSub(1)
+                console.log(sub)
             })
             .catch(error => console.log(error))
     }
@@ -56,7 +58,7 @@ const PredictForm = () => {
     return (
         <>
 
-            <div>
+         { !sub &&    <div>
                 {/* component */}
                 {/* Container */}
 
@@ -275,11 +277,15 @@ const PredictForm = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> }
 
-            <div style={{ padding: "50px" }}>  {sub && <div
-                style={{ color: "black" }}>{result} </div>
-            }</div>
+            
+                  {sub && result==1? <div
+                style={{ color: "black" }}>At Risk </div>:<div></div>
+            }
+              {sub && result==0? <div
+                style={{ color: "black" }}>Not at Risk </div>:<div></div>
+            }
         </>
     );
 }
