@@ -1,6 +1,6 @@
 import { useState } from "react";
 const PredictForm = () => {
-    const [sub, setSub] = useState(0);
+    const [sub, setSub] = useState('');
     const [Age, setAge] = useState('');
     const [SysBP, setSysBP] = useState('');
     const [DiaBP, setDiaBP] = useState('');
@@ -13,6 +13,12 @@ const PredictForm = () => {
     const [Diab, setDiab] = useState('');
     const [result, setResult] = useState('');
 
+
+    const handleChange = (event) => {
+        console.log("Label 👉️", event.target.selectedOptions[0].label);
+        console.log(event.target.value);
+
+    };
     const insertData = () => {
         fetch(`http://localhost:5000/prediction`, {
             'method': 'POST',
@@ -24,6 +30,7 @@ const PredictForm = () => {
             .then(response => response.json())
             .then(body => {
                 setResult(body)
+                console.log(result)
                 setSub(1)
             })
             .catch(error => console.log(error))
@@ -46,106 +53,234 @@ const PredictForm = () => {
         setCiggsperDay('')
     }
 
-    return (<div> <>{!sub && <form onSubmit={handleSubmit}>
-        <div className="create">
-            <label for="Age">Age</label>
-            <input type="number" className="form-control" id="Age" name="Age" aria-describedby="emailHelp"
-                placeholder="Enter age" value={Age}
-                onChange={(e) => setAge(e.target.value)} />
-        </div>
-        <div className="create">
-            <label for="SysBP">Systolic BP</label>
-            <input type="number" className="form-control" id="SysBP" name="SysBP" aria-describedby="emailHelp"
-                placeholder="Enter Systolic BP" value={SysBP}
-                onChange={(e) => setSysBP(e.target.value)} />
-        </div>
-        <div className="create">
-            <label for="DiaBP">Diastolic BP</label>
-            <input type="text" className="form-control" id="DiaBP" name="DiaBP" aria-describedby="emailHelp"
-                placeholder="Enter Diastolic BP" value={DiaBP}
-                onChange={(e) => setDiaBP(e.target.value)} />
-        </div>
-        <div className="create">
-            <label for="HR">Heart Rate</label>
-            <input type="number" className="form-control" id="HR" name="HR" aria-describedby="emailHelp"
-                placeholder="Enter heart rate" value={HR}
-                onChange={(e) => setHR(e.target.value)} />
-        </div>
-        <div className="create">
-            <label for="Glucose">Glucose</label>
-            <input type="number" className="form-control" id="Glucose" name="Glucose" aria-describedby="emailHelp"
-                placeholder="Enter Glucose level" value={Glucose}
-                onChange={(e) => setGlucose(e.target.value)} />
-        </div>
-        <div className="create">
-            <label for="totChol">Total Cholestrol</label>
-            <input type="number" className="form-control" id="totChol" name="totChol" aria-describedby="emailHelp"
-                placeholder="Enter total cholestrol level" value={TotChol}
-                onChange={(e) => setTotChol(e.target.value)} />
-        </div>
-        <div className="create">
-            <label for="CiggsperDay">Cigarattes per day</label>
-            <input type="number" className="form-control" id="CiggsperDay" name="CiggsperDay" aria-describedby="emailHelp"
-                placeholder="Enter Cigarattes per day" value={CiggsperDay}
-                onChange={(e) => setCiggsperDay(e.target.value)} />
-        </div>
-        <div className="create">
-            <div>
-                <h3>Current Smoker?</h3>
-                <input className="form-check-input" type="radio" name="CurrSmok" id="Yes" value="1"
-                    onChange={(e) => setCurrSmok(1)} />
-                <label className="form-check-label" for="exampleRadios1">
-                    Yes
-                </label>
-            </div>
-            <div className="formCheck">
-                <input className="form-check-input" type="radio" name="CurrSmok" id="No" value="0"
-                    onChange={(e) => setCurrSmok(0)} />
-                <label className="form-check-label" for="exampleRadios2">
-                    No
-                </label>
-            </div>
-            <div>
-                <h3>BP meds?</h3>
-                <input className="form-check-input" type="radio" name="BPmeds" id="Yes" value="1"
-                    onChange={(e) => setBPMeds(1)} />
-                <label className="form-check-label" for="exampleRadios1">
-                    Yes
-                </label>
-            </div>
-            <div className="formCheck">
-                <input className="form-check-input" type="radio" name="BPmeds" id="No" value="0"
-                    onChange={(e) => setBPMeds(0)} />
-                <label className="form-check-label" for="exampleRadios2">
-                    No
-                </label>
-            </div>
-            <div>
-                <h3>Diabetes?</h3>
-                <input className="form-check-input" type="radio" name="Diabetes" id="Yes" value="1"
-                    onChange={(e) => setDiab(1)} />
-                <label className="form-check-label" for="exampleRadios1">
-                    Yes
-                </label>
-            </div>
-            <div className="formCheck">
-                <input className="form-check-input" type="radio" name="Diabetes" id="No" value="0"
-                    onChange={(e) => setDiab(0)} />
-                <label className="form-check-label" for="exampleRadios2">
-                    No
-                </label>
-            </div>
-        </div>
+    return (
+        <>
 
-        <div className="create">
+            <div>
+                {/* component */}
+                {/* Container */}
 
-            <button type="submit" className="btn btn-primary">Submit</button>
-        </div>
-    </form>}
-    </>
+                <div className="container mx-auto">
 
-        <div>  {sub && <div>{result} </div>}</div>
-    </div>
+                    <div className="flex justify-center px-6 my-12">
+                        {/* Row */}
+                        <div className="w-full xl:w-3/4 lg:w-11/12 flex">
+                            {/* Col */}
+                            <div
+                                className="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
+                                //className="contact"
+                                style={{
+                                    width: '600px',
+                                    backgroundImage:
+                                        'url("https://th.bing.com/th/id/R.eefc3dc7449e0ac76017190c5f919002?rik=bu3INQpIn75F6Q&riu=http%3a%2f%2fclipart-library.com%2fimg%2f2006972.jpg&ehk=nXMsq92WVadKaTlesOpNCzBraSkiGbc2g%2fEPptDbT%2f0%3d&risl=&pid=ImgRaw&r=0")'
+
+                                }}
+                            />
+                            {/* Col */}
+                            <div className="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none"
+                            >
+                                <h3 className="pt-4 text-2xl text-center"><h3
+                                    style={{ color: "black" }}>Heart Disease Predictor</h3></h3>
+                                <form onSubmit={handleSubmit}>
+
+                                    <div className="mb-4 md:flex md:justify-between">
+                                        <div className="mb-4 md:mr-2 md:mb-0">
+                                            <label
+                                                className="block mb-2 text-sm font-bold text-gray-700"
+                                                htmlFor="firstName"
+                                            >
+                                                Age:
+                                            </label>
+                                            <input
+                                                className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                                id="floating_first_name"
+
+                                                type="number"
+                                                required
+                                                name="Age" aria-describedby="emailHelp"
+                                                placeholder="Enter age" value={Age}
+                                                onChange={(e) => setAge(e.target.value)}
+
+                                            />
+                                        </div>
+
+
+
+                                        <div className="md:ml-2">
+                                            <label
+                                                className="block mb-2 text-sm font-bold text-gray-700"
+                                                htmlFor="lastName"
+                                            >
+                                                Systolic BP
+                                            </label>
+                                            <input
+                                                className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                                id="SysBP" name="SysBP" aria-describedby="emailHelp"
+                                                placeholder="Enter Systolic BP" value={SysBP} type="number"
+                                                onChange={(e) => setSysBP(e.target.value)}
+                                            />
+                                        </div>
+                                        <div className="mb-4 md:mr-2 md:mb-0">
+                                            <label
+                                                className="block mb-2 text-sm font-bold text-gray-700"
+                                                htmlFor="password"
+                                            >
+                                                Diastolic BP
+                                            </label>
+                                            <input
+                                                className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border  rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+
+
+                                                id="DiaBP" name="DiaBP" aria-describedby="emailHelp"
+                                                placeholder="Enter Diastolic BP" value={DiaBP}
+                                                onChange={(e) => setDiaBP(e.target.value)}
+                                            />
+
+                                        </div>
+                                    </div>
+                                    <div className="mb-4 md:flex md:justify-between">
+                                        <div className="mb-4 md:mr-2 md:mb-0">
+                                            <label
+                                                className="block mb-2 text-sm font-bold text-gray-700"
+                                                htmlFor="firstName"
+                                            >
+                                                Heart rate
+                                            </label>
+                                            <input
+
+                                                type="number" id="HR" name="HR" aria-describedby="emailHelp"
+                                                placeholder="Enter heart rate " value={HR}
+                                                onChange={(e) => setHR(e.target.value)}
+                                            />
+
+                                        </div>
+                                    </div>
+                                    <div className="mb-4 md:flex md:justify-between">
+                                        <div className="mb-4 md:mr-2 md:mb-0">
+                                            <label
+                                                className="block mb-2 text-sm font-bold text-gray-700"
+                                                htmlFor="firstName"
+                                            >
+                                                Total Cholestrol
+                                            </label>
+                                            <input
+
+                                                type="number" id="totChol" name="totChol" aria-describedby="emailHelp"
+                                                placeholder="Enter total cholestrol level" value={TotChol}
+                                                onChange={(e) => setTotChol(e.target.value)}
+                                            />
+
+                                        </div>
+                                    </div>
+
+                                    <div className="mb-4 md:flex md:justify-between">
+
+                                        <div className="mb-4 md:flex md:justify-between">
+                                            <div className="md:ml-2">
+                                                <label
+                                                    className="block mb-2 text-sm font-bold text-gray-700"
+                                                    htmlFor="c_password"
+                                                >
+                                                    Glucose
+                                                </label>
+                                                <input
+                                                    className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                                    id="Glucose" name="Glucose" aria-describedby="emailHelp"
+                                                    placeholder="Enter Glucose level" value={Glucose} type="number"
+                                                    onChange={(e) => setGlucose(e.target.value)}
+
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="mb-4 md:flex md:justify-between">
+                                            <div className="md:ml-2">
+                                                <label
+                                                    className="block mb-2 text-sm font-bold text-gray-700"
+                                                    htmlFor="c_password"
+                                                >
+                                                    Ciggarates per Day
+                                                </label>
+                                                <input
+                                                    className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                                    id="CiggsperDay" name="CiggsperDay" aria-describedby="emailHelp"
+                                                    placeholder="Enter Ciggarates per Day" value={CiggsperDay} type="number"
+                                                    onChange={(e) => setCiggsperDay(e.target.value)}
+
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div className="mb-6 text-center">
+                                            <select
+
+                                                value={CurrSmok}
+                                                onChange={(e) => setCurrSmok(e.target.value)}
+
+                                                id="branches"
+                                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            >
+                                                <option selected="">are u a current smoker</option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+
+
+
+                                            </select>
+                                            <div className="mb-6 text-center">
+                                                <select
+
+                                                    value={BPMeds}
+                                                    onChange={(e) => setBPMeds(e.target.value)}
+                                                    id="branches"
+                                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                >
+                                                    <option selected="">Bp meds?</option>
+                                                    <option value="Yes">Yes</option>
+                                                    <option value="No">No</option>
+
+
+
+                                                </select>
+
+                                            </div>
+                                            <div className="mb-6 text-center">
+                                                <select
+
+                                                    value={Diab}
+                                                    onChange={(e) => setDiab(e.target.value)}
+                                                    id="branches"
+                                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                >
+                                                    <option selected="">Diabetes?</option>
+                                                    <option value="Yes">Yes</option>
+                                                    <option value="No">No</option>
+
+
+
+                                                </select>
+                                            </div>
+
+
+                                            <button
+                                                type="submit"
+                                                className="text-black bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                            >
+                                                Submit
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style={{ padding: "50px" }}>  {sub && <div
+                style={{ color: "black" }}>{result} </div>
+            }</div>
+        </>
     );
 }
 
