@@ -1,14 +1,7 @@
 <h1 align="center">
-  <a href="https://github.com/saRvaGnyA/ReachOut-SIH-Prototype">
-    <img src="<h1 align="center">
-  <a href="https://github.com/saRvaGnyA/ReachOut-SIH-Prototype">
-    <img src="https://github.com/saRvaGnyA/ReachOut/raw/main/client/src/Logos/Logo2.png" alt="ReachOut" width="250" height="250">
-  </a>
-  <br>
-  ReachOut
-</h1>
-" width="250" height="250">
-  </a>
+
+    <img src="" alt="ReachOut" width="250" height="250">
+
   <br>
   ReachOut
 </h1>
