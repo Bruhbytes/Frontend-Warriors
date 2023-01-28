@@ -1,9 +1,10 @@
 <h1 align="center">
   <a href="https://github.com/saRvaGnyA/ReachOut-SIH-Prototype">
-    <img src="https://github.com/saRvaGnyA/ReachOut/raw/main/client/src/Logos/Logo2.png" alt="ReachOut" width="250" height="250">
+   ![pulse fit-1 (1)](https://user-images.githubusercontent.com/114346679/215253069-b1a942b4-8d43-4c1b-9b0c-88e70adb7d74.png)
+
   </a>
   <br>
-  ReachOut
+  Pulse Fit
 </h1>
 
 
