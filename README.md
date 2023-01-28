@@ -38,7 +38,8 @@ Pulse-fit: A web application to meet all fitness related needs.
   </td>
  </tr>
 </table>
-##  🛠️Project Set-up
+
+## 🛠️Project Set-up
 
 For the Web-App
 1.Clone the GitHub repo
