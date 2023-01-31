@@ -1,0 +1,27 @@
+.navbar {
+    top: 0%;
+    left: 0%;
+   position:absolute;
+   z-index: 10;
+   width: 100vw;
+   text-decoration: none;
+  
+  }
+  #logoImg{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    z-index:50;
+    top: 50%;
+    left:50%;
+  }
+  #logoImg-n{
+    height: 50px;
+    width: 50px;
+    z-index:50;
+  }
+  .hi
+  {
+    margin-left: 4px;
+    margin-right: 4px;
+  }

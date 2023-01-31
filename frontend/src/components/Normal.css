@@ -1,0 +1,31 @@
+.overweight {
+    font-size: 1.5em;
+    margin: 1.5em;
+    padding: 1em;
+  }
+  .overweight h2 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #011f4b ;
+    padding:50px;
+  }
+ 
+  .overweight h3 {
+    color: #011f4b 
+  }
+  .overweight img {
+    height: 20em;
+    display: flex;
+    /* text-align: center; */
+    margin: auto;
+    opacity: 80%;
+  }
+  .frames {
+    /* margin: 2.5em; */
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  
+  
+  
