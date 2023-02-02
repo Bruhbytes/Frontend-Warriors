@@ -64,7 +64,7 @@
 
 ## 🔗Links
 
-- [GitHub Repository]()
+- [GitHub Repository](https://github.com/rohanfatehchandka/Inheritance)
 - [Demo Video]()
 - [Drive Link to Screenshots of your project](https://drive.google.com/drive/folders/1hZTCHkw_yaMnJ_c1jsrRcVmwoz0eGZFA?usp=sharing)
 - [Hosted Website Link](https://frontend-fw.vercel.app/)
