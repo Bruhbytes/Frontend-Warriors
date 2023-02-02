@@ -42,8 +42,9 @@
     <h4>Key Features</h4>
     <p>
     <ul>
-            <li><strong>BMI Calculator:</strong>The users can calculate their BMI and will get workouts and diet plans suggested according to their health requirement.</li>
-            <li><strong>Gyms:</strong> uses google maps API to suggest nearby gyms </li>
+            <li><strong>BMI Calculator:</strong>The users can calculate their BMI and will get workouts and diet plans suggested according to their health requirement</li>
+            <li><strong>Heart Disease Predictor:</strong> Predicts if your heart is healty or at risk of heart diseases</li>
+            <li><strong>Find naerby Gyms:</strong> uses google maps API to suggest nearby gyms </li>
             <li><strong>Book Appointments:</strong>Allows users to book doctor's appointments</li>
             <li><strong>Community:</strong>Allows users to  share their experiences and build a community</li>
             <li><strong>E-com:</strong>Buy all FItness related products</li>
@@ -76,70 +77,69 @@ Add any more links/resources you used for your project
 Mention all languages/libraries/frameworks used in your project **domain-wise**   
 You can use icons too - find them [here](https://github.com/get-icon/geticon) 
 
-#### Front-end
-- HTML
-- CSS
-- JavaScript
-- 
+- **Server:** ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white), ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)  ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+- **Client:**   ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)  ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
-#### Back-end
-- NodeJS
-- ExpressJS
-- etc.
-
-#### Database
-- MongoDB
-- SQL
-- etc.
-
-#### Computer Vision
-- OpenCV
-- etc.
 
 ## 📈Progress
 
-List down all the fully implemented features in your project
+ fully implemented features :
 
-- [x] Fully Implemented Feature 1 
-- [x] Fully Implemented Feature 2
-
-List down all the partially implemented features in your project
-
-- [ ] Partially Implemented Feature 1 
-- [ ] Partially Implemented Feature 2
+- [x] BMI calculator : will calculate the bmi of a person and will suggest videos and diet tips.
+- [x] Heart Disease Predictor : taking some information about habits of the user our predictor can predit if the user's heart is healthy or at risk of heart disease in future
+- [x] Book Doctor's appointment : user can pre-book Doctor's appointment.
+- [x] Ecommerce : user can buy all fitness realted products here
+- [x] Community : All users of the website can communicate with each other.
+- [x] Map : To find nearby gyms 
+- [x] Login & sign-up : secure login and sigh-up using jwt tokens
+- [x] Contact us: The user can contact us using this feature.It sends automated E-mails
 
 ## 🔮Future Scope
-
-List down all the future plans for the project here
-
-- Future Feature 1
-- Future Feature 2
+- Additional access level: An additional acces level for the admin who can manage the website 
+- Improving the accuracy of Heart Disease Predictor : Currently the accuracy of the model is 85%. Training the model to increase the accuracy
+- Payment checkout for E-commerce part of the website
 
 ## 💸Applications
-
->How can your project do its part in solving a real-life problem? What are its possible applications? Can it be monetized? Describe here.
+- Pulse Fit is capable to host products of many health-realted buisnesses in the E-com part of our website 
+- It can earn add revenue from putting up advertisements
+- Our website contains various features and we aim at meeting all the fitness related needs
 
 ## 🛠Project Setup
 
->Include your project setup basics here. Steps for how someone else can setup your project on their machine. Add any relevant details as well.
+For the Web-App
+1.Clone the GitHub repo
+```bash
+git clone https://github.com/Bruhbytes/Frontend-Warriors.git
+```
+2.Enter the client directory. Install all the required dependencies.
+```bash
+  cd frontend
+  npm install
+  npm start
+```
+3.To start the backend server:
+```bash
+  cd backend
+  npm install
+  npm run dev
+```
 
 ## 💻Usage
 
->Steps to run your project once its setup. If you have an app or website, list how the user can go about using it.
+>Steps to run your project once its setup. 
+- login/Sign-up: Login to the website using your credentials.If you are a new user u can sign-up using your e-mail id and set up a secure password (for ex. rohan@gmail.com ,password:Rohan@12345)
+- All the features are listed on the navbar can be used
 
 ## 👨‍💻Team Members
 
-Add names of your team members with their emails and links to their GitHub accounts
-
-- [Team Member 1 Name](https://github.com/): Email 
-- [Team Member 2 Name](https://github.com/): Email 
+ - [Rohan Fatehchandka](https://github.com/rohanfatehchandka) : rvfatehchandka_b21@ce.vjti.ac.in
+ - [Tanaya Shelke](https://github.com/tanayaa1) :  tsshelke_b21@ce.vjti.ac.in
+ - [Om Doiphode](https://github.com/Om-Doiphode) :  oadoiphode_b21@ce.vjti.ac.in
+ 
 
 ## 👨‍🏫Mentors
-
-Add names of your mentors with their emails and links to their GitHub accounts
-
-- [Mentor 1 Name](https://github.com/): Email 
-- [Mentor 2 Name](https://github.com/): Email 
+ - [Harsh Nag](https://github.com/Jigsaw-23122002)
+ - [Devansh Joshi](https://github.com/devdev29)
 
 ## 📱Screenshots
 Add a few screenshots for parts of the project completed till now to give the viewer a quick idea of what your project looks like. After all, a picture speaks a thousand words.
