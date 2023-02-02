@@ -9,7 +9,7 @@
 <div align="center">
    <strong>Pulse Fit</strong> - One stop destination for all your fitness needs<br>
   CoC Inheritance 2022 || Frontend Warriors <br> <br>
-  Add any <a href="https://shields.io/">Shields</a> here
+  
 </div>
 <hr>
 
