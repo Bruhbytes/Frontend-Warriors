@@ -23,6 +23,7 @@
 - [Future Scope](#future-scope)
 - [Applications](#applications)
 - [Project Setup](#project-setup)
+- [Major Roadblocks](#major-roadblocks)
 - [Usage](#usage)
 - [Team Members](#team-members)
 - [Mentors](#mentors)
@@ -65,9 +66,9 @@
 
 - [GitHub Repository]()
 - [Demo Video]()
-- [Drive Link to Screenshots of your project]()
-- [Hosted Website Link]()
-- [App APK Link]()
+- [Drive Link to Screenshots of your project](https://drive.google.com/drive/folders/1hZTCHkw_yaMnJ_c1jsrRcVmwoz0eGZFA?usp=sharing)
+- [Hosted Website Link](https://frontend-fw.vercel.app/)
+
 - [Hosted Backend Link]()
 
 Add any more links/resources you used for your project
@@ -123,6 +124,35 @@ git clone https://github.com/Bruhbytes/Frontend-Warriors.git
   npm install
   npm run dev
 ```
+## 🚧Major Roadblocks
+1. material-ui has a peer dependency conflict with React  
+   ```
+   npm ERR! code ERESOLVE
+   npm ERR! ERESOLVE unable to resolve dependency tree
+   npm ERR! 
+   npm ERR! While resolving: portfolio@0.1.0
+   npm ERR! Found: react@17.0.1
+   npm ERR! node_modules/react
+   npm ERR!   react@"^17.0.1" from the root project
+   npm ERR! 
+   npm ERR! Could not resolve dependency:
+   npm ERR! peer react@"^16.8.0" from @material-ui/core@4.11.0
+   npm ERR! node_modules/@material-ui/core
+   npm ERR!   @material-ui/core@"*" from the root project
+   npm ERR! 
+   npm ERR! Fix the upstream dependency conflict, or retry
+   npm ERR! this command with --force, or --legacy-peer-deps
+   npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+   npm ERR! 
+   npm ERR! See /Users/jordanhilado/.npm/eresolve-report.txt for a full report.
+
+   npm ERR! A complete log of this run can be found in:
+   npm ERR!     /Users/jordanhilado/.npm/_logs/2020-10-31T17_57_54_724Z-debug.log
+   ```
+   Solution:
+   ```
+   npm install -f @material-ui/core
+   ```
 
 ## 💻Usage
 
