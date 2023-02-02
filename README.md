@@ -32,9 +32,33 @@
 
 ## 📝Description
 
-Add your **project description** here. Your project description should cover how your website/app works. That way you can convey what your project is without the need for anyone to view the code. A more *detailed README* in your project repository is encouraged, which can include build and use instructions etc.
-
-1. Include features and their usecases in bullet points
+<table>
+  <tr>
+    <td>
+      The <strong>Pulse-Fit</strong> is a one stop destination for all ypur fitness related needs
+    <br>
+    <h3>Access Level</h3>   
+    The React based web app has one access levels :
+    <h4>Key Features</h4>
+    <p>
+    <ul>
+            <li><strong>BMI Calculator:</strong>The users can calculate their BMI and will get workouts and diet plans suggested according to their health requirement.</li>
+            <li><strong>Gyms:</strong> uses google maps API to suggest nearby gyms </li>
+            <li><strong>Book Appointments:</strong>Allows users to book doctor's appointments</li>
+            <li><strong>Community:</strong>Allows users to  share their experiences and build a community</li>
+            <li><strong>E-com:</strong>Buy all FItness related products</li>
+    </ul>
+    </p>
+    <h3>Business Potential</h3>
+    <p>
+    <ul>
+    <li>The companies can sell their fitness realted products on the website</li>
+    <li>Website can earn add revenue from putting up advertisements</li>
+    </ul>
+    </p>
+  </td>
+ </tr>
+</table>
 
 ## 🔗Links
 
@@ -56,7 +80,7 @@ You can use icons too - find them [here](https://github.com/get-icon/geticon)
 - HTML
 - CSS
 - JavaScript
-- etc.
+- 
 
 #### Back-end
 - NodeJS
