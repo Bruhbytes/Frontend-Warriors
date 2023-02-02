@@ -1,7 +1,7 @@
+
+
+
 <h1 align="center">
-  <a href="https://github.com/CommunityOfCoders/Inheritance-2022">
-    <img src="https://res.cloudinary.com/dn6vz8exv/image/upload/v1665664791/inh_zzefoy.jpg" alt="CoC Inheritance 2022" width="500" height="166">
-  </a>
   <br>
   Project Name: Pulse Fit
 </h1>
@@ -176,7 +176,7 @@ Add a few screenshots for parts of the project completed till now to give the vi
 
 You'll have to link the screenshots from your drive folder here.
 
-![Screenshot alt text](https://i.redd.it/qp8ocyzvyj8a1.jpg "Here is a screenshot")
+![Screenshot alt text](https://drive.google.com/file/d/1yTf6nwxxz3pXxGmDx2Ytjx9bjaKpS5B-/view?usp=share_link "Here is a screenshot")
 
 Use this template as a guide for writing your documentation. Feel free to customize and adapt it for you project.  
 For more Markdown syntax help, visit [here](https://www.markdownguide.org/basic-syntax/)
