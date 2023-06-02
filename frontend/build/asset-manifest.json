@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.16562188.css",
+    "main.js": "/static/js/main.c8e2d180.js",
+    "static/media/aboutbg2.png": "/static/media/aboutbg2.277294930693c3ab66da.png",
+    "static/media/Pulse.png": "/static/media/Pulse.97130105ac8021fb6296.png",
+    "static/media/heart.jpg": "/static/media/heart.b5e536dd271db7c5d35d.jpg",
+    "static/media/logo.jpg": "/static/media/logo.adab1fbe2fb28992bc25.jpg",
+    "static/media/exercise.jpg": "/static/media/exercise.bf7a4dd934f688e952bb.jpg",
+    "service-worker.js": "/service-worker.js",
+    "static/media/shop.jpeg": "/static/media/shop.330d87e616ba3ff8322a.jpeg",
+    "index.html": "/index.html",
+    "main.16562188.css.map": "/static/css/main.16562188.css.map",
+    "main.c8e2d180.js.map": "/static/js/main.c8e2d180.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.16562188.css",
+    "static/js/main.c8e2d180.js"
+  ]
+}

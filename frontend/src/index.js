@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import  store  from "./redux/store";
 import { WorkoutsContextProvider } from './context/WorkoutContext'
 import { AuthContextProvider } from './context/AuthContext'
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,3 +20,4 @@ root.render(
     </AuthContextProvider>
   </React.StrictMode>
 );
+serviceWorkerRegistration.register();
